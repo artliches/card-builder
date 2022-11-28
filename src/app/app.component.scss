@@ -1,0 +1,223 @@
+$base-font: 12pt;
+$large-font: 14pt;
+$small-font: 9pt;
+
+h1 {
+    font-size: 3rem;
+}
+
+h1, .title, label, button {
+    font-family: 'Gabriela-Regular', serif;
+}
+
+.title {
+    text-align: center;
+}
+
+.rotate-arrow {
+    writing-mode: vertical-lr;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 0rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+
+    &.create, &.clearForm {
+        margin-bottom: 1rem;
+    }
+
+    &.print {
+        width: 90px;
+    }
+
+    &.collapse {
+        padding: 0.5rem;
+    }
+
+    &.disabled {
+        background-color: darkgray;
+        cursor: default;
+    }
+
+    &:hover:not(.disabled) {
+       transform: scale(1.05); 
+    }
+}
+
+.card-builder-main {
+    display: grid;
+    margin: auto;
+
+    .header-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+    
+        h1 {
+            margin-bottom: 0rem;
+        }
+        .subtitle {
+            margin-bottom: 0.5rem;
+        }
+        .button-section {
+            display: flex;
+            flex-direction: row;
+            grid-gap: 1rem;
+        }
+    }
+}
+
+.card-creator-layout {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 1rem;
+    grid-template-areas:
+        "sidebar    deck";
+
+    .sidebar-section {
+        grid-area: sidebar;
+        display: grid;
+        grid-template-columns: auto min-content;
+        grid-gap: 1rem;
+
+        .input-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-preview {
+            place-self: start center;
+            user-select: none;
+        }
+
+        .form-layout {
+            display: flex;
+            flex-direction: column;
+            input, textarea {
+                border: none;
+                border-radius: 5px;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .card-grid {
+        grid-area: deck;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .index-card {
+        height: 5in;
+        width: 3in;
+        background-color: white;
+        color: black;
+        padding: 1rem;
+        // border: 0.9rem solid darkgrey;
+        border: 1px solid black;
+        border-radius: 10px;
+    
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 0.5rem;
+    
+        font-size: $base-font;
+
+        &.blank {
+            grid-template-rows: repeat(2, auto) 1fr auto;
+        }
+        &.deck-card {
+            grid-template-rows: repeat(3, auto) 1fr auto;
+            // &:nth-child(n+3) {
+            //     position:absolute;
+            // }
+            // &:nth-child(n+3):nth-child(even) {
+            //     left: 71.1%;
+            // }
+            .remove, .title {
+                cursor: pointer;
+            }
+            .remove {
+                user-select: none;
+            }
+            transition: all .2s ease-in-out;
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        .title-section {
+            display: grid;
+            grid-template-columns: auto 1fr;
+        }
+
+        .title {
+            place-self: center;
+            text-transform: uppercase;
+            text-decoration: underline;
+            font-size: $large-font;
+        }
+    
+        .flavor {
+            place-self: center;
+            text-align: center;
+            font-size: $small-font;
+        }
+    
+        .keywords {
+            place-self: end;
+            font-size: $small-font;
+        }
+    }
+}
+
+@media print {
+    h1 {
+        display: none;
+    }
+
+    .card-builder-main {
+        .header-section {
+            display: none;
+        }
+        .card-creator-layout {
+            .collapse-expand {
+                display: none;
+            }
+            .input-section {
+                display: none;
+            }
+            span.card-preview {
+                display: none;
+            }
+
+            display: flex;
+            .card-grid {
+                display: flex;
+                :nth-child(4n-1), :nth-child(4n) {
+                    margin-bottom: .299in;
+                }
+            }
+    
+            .index-card {
+                .title-section {
+                    grid-template-columns: 1fr;
+                    place-content: center;
+                }
+            }
+    
+            .index-card.deck-card {
+                .remove-section {
+                    display: none;
+                }
+            }
+        }
+    }
+}

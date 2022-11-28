@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Gabriela-Regular";
+    src: local("Gabriela-Regular"), url(/assets/fonts/Gabriela-Regular.ttf) format('opentype');
+    font-weight: 100 1000;
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: local("Roboto Mono"), url(./assets/fonts/RobotoMono-VariableFont_wght.ttf) format('opentype');
+    font-weight: 100 1000;
+}
+
+body {
+    // background-color: rgba(0, 0, 0, 0.935);
+    background-image: linear-gradient(to right, black, #414141);
+    margin: 1rem;
+    color: white;
+    font-family: 'Roboto Mono', sans-serif;
+    height: 100vh;
+}
+
+@media print {
+    body {
+        background-color: white;
+        background-image: none;
+        color: black;
+        margin: 0rem;
+    }
+}
