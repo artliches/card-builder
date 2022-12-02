@@ -57,6 +57,7 @@ button {
         flex-direction: column;
         align-items: center;
         margin-bottom: 1rem;
+        text-align: center;
     
         h1 {
             margin-bottom: 0rem;
@@ -74,16 +75,19 @@ button {
 
 .card-creator-layout {
     display: grid;
-    grid-template-columns: repeat(2, auto) 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto auto 1fr;
     column-gap: 1rem;
     grid-template-areas:
-        "sidebar    info    deck";
+        "sidebar    sidebar"
+        "info       info"
+        "deck       deck";
 
     .sidebar-section {
         grid-area: sidebar;
         display: grid;
-        grid-template-columns: auto min-content;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
         grid-gap: 1rem;
 
         .input-section {
@@ -108,9 +112,12 @@ button {
     }
 
     .copy-info {
+        &::before {
+            content: '↓';
+        }
         grid-area: info;
         text-align: center;
-        writing-mode: vertical-lr;
+        // writing-mode: vertical-lr;
         user-select: none;
         place-self: start end;
     }
@@ -140,6 +147,10 @@ button {
         grid-gap: 0.5rem;
     
         font-size: $base-font;
+
+        .descrip {
+            white-space: pre-wrap;
+        }
 
         &.blank {
             grid-template-rows: repeat(2, auto) 1fr auto;
@@ -231,6 +242,47 @@ button {
                 .remove-section {
                     display: none;
                 }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .card-builder-main {
+        .card-creator-layout {
+            .sidebar-section {
+                grid-template-columns: auto min-content;
+            }
+
+            .copy-info {
+                place-self: unset;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .card-builder-main {
+        max-width: 95%;
+        .card-creator-layout {
+            grid-template-columns: repeat(2, auto) 1fr;
+            grid-template-areas:
+                "sidebar    info    deck";
+
+            .sidebar-section {
+                grid-template-columns: auto min-content;
+            }
+
+            .copy-info {
+                &::before {
+                    content: '↑';
+                }
+                place-self: start end;
+                writing-mode: vertical-lr;
+            }
+
+            .card-grid {
+                justify-content: start;
             }
         }
     }

@@ -1,6 +1,6 @@
 <span class="card-builder-main">
   <span class="header-section">
-    <h1>CARD BUILDER</h1>
+    <h1>WHAT DO WE HAVE HERE?</h1>
     <em class="subtitle"><span class="rotate-arrow">&#8626;</span>magick item card builder</em>
     <span class="button-section">
       <button @showHideAnimation *ngIf="cardDeck.length > 0" class="print" (click)="print()">Print</button>
@@ -35,8 +35,7 @@
           <em class="flavor">
             {{cardData.value.flavor || 'flavor text'}}
           </em>
-          <div class="descrip">
-            {{cardData.value.description || 'item description'}}
+          <div class="descrip" [innerHtml]="cardData.value.description || 'item description'">
           </div>
           <em class="keywords">
             {{cardData.value.keywords || 'keywords'}}
@@ -47,7 +46,7 @@
     </span>
 
     <div @slideUp *ngIf="cardDeck.length > 0" class="copy-info">
-      &#8593;double click card to copy for discord
+      double click card to copy for discord
     </div>
 
     <div class="card-grid">
