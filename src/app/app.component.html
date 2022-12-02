@@ -3,14 +3,14 @@
     <h1>CARD BUILDER</h1>
     <em class="subtitle"><span class="rotate-arrow">&#8626;</span>magick item card builder</em>
     <span class="button-section">
-      <button @showButton *ngIf="cardDeck.length > 0" class="print" (click)="print()">Print</button>
-      <button @showButton class="collapse" (click)="showSidebar = !showSidebar">{{showSidebar ? 'Collapse Sidebar' : 'Expand Sidebar'}}
+      <button @showHideAnimation *ngIf="cardDeck.length > 0" class="print" (click)="print()">Print</button>
+      <button @showHideAnimation class="collapse" (click)="showSidebar = !showSidebar">{{showSidebar ? 'Collapse Sidebar' : 'Expand Sidebar'}}
       </button>
     </span>
   </span>
   <div class="card-creator-layout">
     <span class="sidebar-section">
-      <span @toggleSidebar *ngIf="showSidebar" class="input-section">
+      <span @slideLeft *ngIf="showSidebar" class="input-section">
         <form [formGroup]="cardData" class="form-layout" (ngSubmit)="onSubmit()">
           <label for="itemName">Item Name</label>
           <input id="itemName"type='text' formControlName="itemName">
@@ -20,14 +20,14 @@
           <textarea id="description"type='text' formControlName="description"></textarea>
           <label for="keywords">Keywords</label>
           <input id="keywords"type='text' formControlName="keywords">
-          <button @showButton *ngIf="cardData.value.itemName && cardData.value.description" class="create" type="submit">Create Card</button>
+          <button @slideLeft *ngIf="cardData.value.itemName && cardData.value.description" class="create" type="submit">Create Card</button>
         </form>
-        <button @showButton class="clearForm" (click)="clearForm()">Clear Form</button>
-        <button @showButton *ngIf="cardDeck.length > 0" class="clear" (click)="clearDeck()">Clear Deck</button>
+        <button @slideLeft class="clearForm" *ngIf="showClearButton()" (click)="clearForm()">Clear Form</button>
+        <button @slideLeft *ngIf="cardDeck.length > 0" class="clear" (dblclick)="clearDeck()">Doubleclick to Clear Deck</button>
         <em class="subtitle"><span class="rotate-arrow">&#8626;</span>add item name & description to create a card</em>
       </span>
 
-      <span @toggleSidebar *ngIf="showSidebar" class="card-preview">
+      <span @slideLeft *ngIf="showSidebar" class="card-preview">
         <div class="index-card blank">
           <strong class="title">
             {{cardData.value.itemName || 'item name'}}
@@ -46,8 +46,12 @@
       </span>
     </span>
 
+    <div @slideUp *ngIf="cardDeck.length > 0" class="copy-info">
+      &#8593;double click card to copy for discord
+    </div>
+
     <div class="card-grid">
-      <div (dblclick)="copyCard(i)" *ngFor="let card of cardDeck; index as i" class="index-card deck-card">
+      <div @slideRight (dblclick)="copyCard(i)" *ngFor="let card of cardDeck; index as i" class="index-card deck-card">
         <div class="title-section">
           <div class="remove-section">
             <span class="remove" (click)="remove(i)">x</span>

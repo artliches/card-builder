@@ -7,7 +7,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [
-    trigger('showButton', [
+    trigger('showHideAnimation', [
       transition(':enter', [
         style({opacity: 0, scale: 0}),
         animate('.6s ease-in-out', style({opacity: 1, scale: 1}))
@@ -16,13 +16,31 @@ import { FormControl, FormGroup } from '@angular/forms';
         animate('.6s ease-in-out', style({opacity: 0, scale: 0}))
       ]),
     ]),
-    trigger('toggleSidebar', [
+    trigger('slideLeft', [
       transition(':enter', [
-        style({transform: 'translate3d(-100%, 0, 0'}),
+        style({transform: 'translate3d(-300%, 0, 0'}),
         animate('400ms ease-in-out', style({transform: 'translate3d(0,0,0)'})),
       ]),
       transition(':leave', [
-        animate('400ms ease-in-out', style({transform: 'translate3d(-200%, 0, 0)'}))
+        animate('400ms ease-in-out', style({transform: 'translate3d(-300%, 0, 0)'}))
+      ]),
+    ]),
+    trigger('slideRight', [
+      transition(':enter', [
+        style({transform: 'translate3d(300%, 0, 0'}),
+        animate('400ms ease-in-out', style({transform: 'translate3d(0,0,0)'})),
+      ]),
+      transition(':leave', [
+        animate('400ms ease-in-out', style({transform: 'translate3d(300%, 0, 0)'}))
+      ]),
+    ]),
+    trigger('slideUp', [
+      transition(':enter', [
+        style({transform: 'translate3d(0, 300%, 0'}),
+        animate('400ms ease-in-out', style({transform: 'translate3d(0,0,0)'})),
+      ]),
+      transition(':leave', [
+        animate('400ms ease-in-out', style({transform: 'translate3d(0, 300%, 0)'}))
       ]),
     ]),
   ]
@@ -83,5 +101,9 @@ export class AppComponent implements OnInit {
   remove(event: any) {
     this.cardDeck.splice(event, 1);
     window.localStorage.setItem('card_builder_deck', JSON.stringify(this.cardDeck));
+  }
+
+  showClearButton(): boolean {
+    return this.cardData.value.itemName || this.cardData.value.flavor || this.cardData.value.description || this.cardData.value.keywords;
   }
 }
