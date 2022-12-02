@@ -17,6 +17,10 @@ body {
     color: white;
     font-family: 'Roboto Mono', sans-serif;
     height: 100vh;
+
+    h1, .title, label, button {
+        font-family: 'Gabriela-Regular', 'Roboto Mono', sans-serif;
+    }
 }
 
 @media print {

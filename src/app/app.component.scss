@@ -6,10 +6,6 @@ h1 {
     font-size: 3rem;
 }
 
-h1, .title, label, button {
-    font-family: 'Gabriela-Regular', 'Roboto Mono', sans-serif;
-}
-
 .title {
     text-align: center;
 }
@@ -117,7 +113,6 @@ button {
         }
         grid-area: info;
         text-align: center;
-        // writing-mode: vertical-lr;
         user-select: none;
         place-self: start end;
     }
@@ -130,15 +125,11 @@ button {
     }
     
     .index-card {
-        // tarrot card dimensions
-        // height: 15cm;
-        // width: 7cm;
         height: 5in;
         width: 3in;
         background-color: white;
         color: black;
         padding: 1rem;
-        // border: 0.9rem solid darkgrey;
         border: 1px solid black;
         border-radius: 10px;
     
@@ -157,12 +148,6 @@ button {
         }
         &.deck-card {
             grid-template-rows: repeat(3, auto) 1fr auto;
-            // &:nth-child(n+3) {
-            //     position:absolute;
-            // }
-            // &:nth-child(n+3):nth-child(even) {
-            //     left: 71.1%;
-            // }
             .remove, .title {
                 cursor: pointer;
             }
