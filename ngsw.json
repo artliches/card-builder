@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1670258948439,
+  "timestamp": 1670260181625,
   "index": "/card-builder/index.html",
   "assetGroups": [
     {
@@ -17,7 +17,7 @@
         "/card-builder/manifest.webmanifest",
         "/card-builder/polyfills.eecd7548eac8bd7f.js",
         "/card-builder/runtime.4b032de088406900.js",
-        "/card-builder/styles.07e62f539be1b563.css"
+        "/card-builder/styles.a4867b9f25adbd2a.css"
       ],
       "patterns": []
     },
@@ -29,6 +29,7 @@
         "ignoreVary": true
       },
       "urls": [
+        "/card-builder/Gabriela-Regular.f503bfc21c7a631c.ttf",
         "/card-builder/RobotoMono-VariableFont_wght.c2fd1c69d0c4ce13.ttf",
         "/card-builder/assets/fonts/Gabriela-Regular.ttf",
         "/card-builder/assets/fonts/Roboto-Regular.ttf",
@@ -45,6 +46,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
+    "/card-builder/Gabriela-Regular.f503bfc21c7a631c.ttf": "9428c6950613be9e41a9703da8cb1fa4f0374f4d",
     "/card-builder/RobotoMono-VariableFont_wght.c2fd1c69d0c4ce13.ttf": "49b4d9fac9359dbe93549548dcf74141e491ad6f",
     "/card-builder/assets/fonts/Gabriela-Regular.ttf": "9428c6950613be9e41a9703da8cb1fa4f0374f4d",
     "/card-builder/assets/fonts/Roboto-Regular.ttf": "56c5c0d38bde4c1f1549dda43db37b09c608aad3",
@@ -56,12 +58,12 @@
     "/card-builder/assets/icons/favicon-32x32.png": "8d5a32ba748a66d9d4e583e7dab58189dcbd650a",
     "/card-builder/assets/icons/favicon.ico": "d8c7a1cef5a499b359b7f8c33b47ff63e9cbb142",
     "/card-builder/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/card-builder/index.html": "1fd7f35c8f07b754d1ee6ebea0b9a4374c18d7da",
+    "/card-builder/index.html": "8fc8aee574aace0c198b45794473abcc4a73f2d2",
     "/card-builder/main.e4b805b382f1c13b.js": "dec4363a2e6c7a2ac080ac76ac3c7b67eb01e175",
     "/card-builder/manifest.webmanifest": "ea189d18516e29cefe2e9c7d3e37d7ffc524a57d",
     "/card-builder/polyfills.eecd7548eac8bd7f.js": "82d19db75d0efae84475bfa40501cc7309e326db",
     "/card-builder/runtime.4b032de088406900.js": "9ede7a33543b6b04aa2d466890b59367c2dc3f5e",
-    "/card-builder/styles.07e62f539be1b563.css": "3a04222fe3ca000498444bbccd5479acb00fc2bc"
+    "/card-builder/styles.a4867b9f25adbd2a.css": "f05aa2337be5361691478429c03d5f43a08be419"
   },
   "navigationUrls": [
     {
