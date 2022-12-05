@@ -78,7 +78,7 @@ export class AppComponent implements OnInit {
     const title = `__**${cardData.itemName.toUpperCase()}**__\r\n`;
     const flavor = `*${cardData.flavor}*\r\n`;
     const descrip = `${cardData.description}\r\n`;
-    const keywords = `\r\n*__KEYWORDS:__${cardData.keywords.toLowerCase().trim()}*`;
+    const keywords = `\r\n*__KEYWORDS:__ ${cardData.keywords.toLowerCase().trim()}*`;
     
     this.clipBoard =
       title + flavor + descrip + keywords;
