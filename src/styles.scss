@@ -30,6 +30,11 @@ body {
     input#itemName {
         text-align: center;
     }
+    a {
+        background-color: white;
+        color: black;
+        font-weight: bold;
+    }
 }
 
 @media print {
