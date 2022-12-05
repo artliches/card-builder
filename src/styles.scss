@@ -11,15 +11,24 @@
 }
 
 body {
-    // background-color: rgba(0, 0, 0, 0.935);
-    background-image: linear-gradient(to right, black, #414141);
+    // background-image: linear-gradient(to right, black, #414141);
+    background-image: linear-gradient(to right, black, #787878);
     margin: 1rem;
     color: white;
     font-family: 'Roboto Mono', sans-serif;
     height: 100vh;
 
-    h1, .title, label, button {
+    h1, .title, label {
         font-family: 'Gabriela-Regular', 'Roboto Mono', sans-serif;
+    }
+    button {
+        font-family: 'Roboto Mono', sans-serif;
+    }
+    textarea {
+        resize: vertical;
+    }
+    input#itemName {
+        text-align: center;
     }
 }
 

@@ -1,10 +1,11 @@
 <span class="card-builder-main">
   <span class="header-section">
     <h1>WHAT DO WE HAVE HERE?</h1>
-    <em class="subtitle"><span class="rotate-arrow">&#8626;</span>magick item card builder</em>
+    <em class="subtitle"><span class="rotate-arrow">&#8626;</span>magick item card builder for swords and sworcery games</em>
+    <em class="subtitle small">v1 create by <a href="https://twitter.com/codeLiches" target="_blank">@codeLiches</a></em>
     <span class="button-section">
-      <button @showHideAnimation *ngIf="cardDeck.length > 0" class="print" (click)="print()">Print</button>
-      <button @showHideAnimation class="collapse" (click)="showSidebar = !showSidebar">{{showSidebar ? 'Collapse Sidebar' : 'Expand Sidebar'}}
+      <button @showHideAnimation *ngIf="cardDeck.length > 0" class="print" (click)="print()"><strong>print</strong></button>
+      <button @showHideAnimation class="collapse" (click)="showSidebar = !showSidebar"><strong>{{showSidebar ? 'hide builder' : 'show builder'}}</strong>
       </button>
     </span>
   </span>
@@ -12,33 +13,33 @@
     <span class="sidebar-section">
       <span @slideLeft *ngIf="showSidebar" class="input-section">
         <form [formGroup]="cardData" class="form-layout" (ngSubmit)="onSubmit()">
-          <label for="itemName">Item Name</label>
+          <label for="itemName">What do we name it?</label>
           <input id="itemName"type='text' formControlName="itemName" autocomplete="off">
-          <label for="flavor">Flavor Text</label>
+          <label for="flavor">What stories do we tell about it?</label>
           <textarea id="flavor"type='text' formControlName="flavor" autocomplete="off"></textarea>
-          <label for="description">Description</label>
+          <label for="description">What does it do?</label>
           <textarea id="description"type='text' formControlName="description" autocomplete="off"></textarea>
-          <label for="keywords">Keywords</label>
+          <label for="keywords">What quick descriptions do we give it?</label>
           <input id="keywords"type='text' formControlName="keywords" autocomplete="off">
-          <button @slideLeft *ngIf="cardData.value.itemName && cardData.value.description" class="create" type="submit">Create Card</button>
+          <button @slideLeft *ngIf="cardData.value.itemName && cardData.value.description" class="create" type="submit"><strong>create card</strong></button>
         </form>
-        <button @slideLeft class="clearForm" *ngIf="showClearButton()" (click)="clearForm()">Clear Form</button>
-        <button @slideLeft *ngIf="cardDeck.length > 0" class="clear" (dblclick)="clearDeck()">Doubleclick to Clear Deck</button>
-        <em class="subtitle"><span class="rotate-arrow">&#8626;</span>add item name & description to create a card</em>
+        <button @slideLeft class="clearForm" *ngIf="showClearButton()" (click)="clearForm()"><strong>clear builder</strong></button>
+        <button @slideLeft *ngIf="cardDeck.length > 0" class="clear" (dblclick)="clearDeck()"><strong>doubleclick to destroy the deck</strong></button>
+        <em class="subtitle"><span class="rotate-arrow">&#8626;</span>add a name & a story to create a card</em>
       </span>
 
       <span @slideLeft *ngIf="showSidebar" class="card-preview">
         <div class="index-card blank">
           <strong class="title">
-            {{cardData.value.itemName || 'item name'}}
+            {{cardData.value.itemName || 'what am i called?'}}
           </strong>
           <em class="flavor">
-            {{cardData.value.flavor || 'flavor text'}}
+            {{cardData.value.flavor || 'what stories are told about me?'}}
           </em>
-          <div class="descrip" [innerHtml]="cardData.value.description || 'item description'">
+          <div class="descrip" [innerHtml]="cardData.value.description || 'What do I do?'">
           </div>
           <em class="keywords">
-            {{cardData.value.keywords || 'keywords'}}
+            {{cardData.value.keywords || 'quick little descriptions'}}
           </em>
         </div>
         <em class="subtitle"><span class="rotate-arrow">&#8626;</span>card preview</em>

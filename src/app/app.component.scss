@@ -1,6 +1,7 @@
 $base-font: 12pt;
 $large-font: 14pt;
 $small-font: 9pt;
+$tiny-font: 7pt;
 
 h1 {
     font-size: 3rem;
@@ -14,10 +15,15 @@ h1 {
     writing-mode: vertical-lr;
 }
 
+a {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
 button {
     border: none;
-    border-radius: 5px;
-    padding: 0.5rem 0rem;
+    padding: 0.1rem 0.5rem;
     font-size: 1rem;
     cursor: pointer;
     transition: all .2s ease-in-out;
@@ -28,10 +34,6 @@ button {
 
     &.print {
         width: 90px;
-    }
-
-    &.collapse {
-        padding: 0.5rem;
     }
 
     &.disabled {
@@ -60,6 +62,9 @@ button {
         }
         .subtitle {
             margin-bottom: 0.5rem;
+            &.small {
+                font-size: $tiny-font;
+            }
         }
         .button-section {
             display: flex;
