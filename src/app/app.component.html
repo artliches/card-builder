@@ -13,13 +13,13 @@
       <span @slideLeft *ngIf="showSidebar" class="input-section">
         <form [formGroup]="cardData" class="form-layout" (ngSubmit)="onSubmit()">
           <label for="itemName">Item Name</label>
-          <input id="itemName"type='text' formControlName="itemName">
+          <input id="itemName"type='text' formControlName="itemName" autocomplete="off">
           <label for="flavor">Flavor Text</label>
-          <textarea id="flavor"type='text' formControlName="flavor"></textarea>
+          <textarea id="flavor"type='text' formControlName="flavor" autocomplete="off"></textarea>
           <label for="description">Description</label>
-          <textarea id="description"type='text' formControlName="description"></textarea>
+          <textarea id="description"type='text' formControlName="description" autocomplete="off"></textarea>
           <label for="keywords">Keywords</label>
-          <input id="keywords"type='text' formControlName="keywords">
+          <input id="keywords"type='text' formControlName="keywords" autocomplete="off">
           <button @slideLeft *ngIf="cardData.value.itemName && cardData.value.description" class="create" type="submit">Create Card</button>
         </form>
         <button @slideLeft class="clearForm" *ngIf="showClearButton()" (click)="clearForm()">Clear Form</button>
