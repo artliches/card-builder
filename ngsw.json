@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1670268019967,
+  "timestamp": 1670268087181,
   "index": "/card-builder/index.html",
   "assetGroups": [
     {
@@ -58,7 +58,7 @@
     "/card-builder/assets/icons/favicon-32x32.png": "8d5a32ba748a66d9d4e583e7dab58189dcbd650a",
     "/card-builder/assets/icons/favicon.ico": "d8c7a1cef5a499b359b7f8c33b47ff63e9cbb142",
     "/card-builder/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/card-builder/index.html": "ebea0da2aaf5761f943bfbb1c1b8e96e89a1ab31",
+    "/card-builder/index.html": "e181d78e5f8aa6a0328db8ce109d312bf095306a",
     "/card-builder/main.a63d1f37f15a4c94.js": "90322e3e9fff2f0f911addafa2f142fbb2dc6348",
     "/card-builder/manifest.webmanifest": "65fbafb1728dcb889036e8c912facb5302101042",
     "/card-builder/polyfills.eecd7548eac8bd7f.js": "82d19db75d0efae84475bfa40501cc7309e326db",
