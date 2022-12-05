@@ -1,0 +1,85 @@
+{
+  "configVersion": 1,
+  "timestamp": 1670258587098,
+  "index": "/card-builder/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/card-builder/favicon.ico",
+        "/card-builder/index.html",
+        "/card-builder/main.e280f0474d84f813.js",
+        "/card-builder/manifest.webmanifest",
+        "/card-builder/polyfills.eecd7548eac8bd7f.js",
+        "/card-builder/runtime.4b032de088406900.js",
+        "/card-builder/styles.07e62f539be1b563.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/card-builder/RobotoMono-VariableFont_wght.c2fd1c69d0c4ce13.ttf",
+        "/card-builder/assets/fonts/Gabriela-Regular.ttf",
+        "/card-builder/assets/fonts/Roboto-Regular.ttf",
+        "/card-builder/assets/fonts/RobotoMono-VariableFont_wght.ttf",
+        "/card-builder/assets/icons/android-chrome-192x192.png",
+        "/card-builder/assets/icons/android-chrome-512x512.png",
+        "/card-builder/assets/icons/apple-touch-icon.png",
+        "/card-builder/assets/icons/favicon-16x16.png",
+        "/card-builder/assets/icons/favicon-32x32.png",
+        "/card-builder/assets/icons/favicon.ico"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/card-builder/RobotoMono-VariableFont_wght.c2fd1c69d0c4ce13.ttf": "49b4d9fac9359dbe93549548dcf74141e491ad6f",
+    "/card-builder/assets/fonts/Gabriela-Regular.ttf": "9428c6950613be9e41a9703da8cb1fa4f0374f4d",
+    "/card-builder/assets/fonts/Roboto-Regular.ttf": "56c5c0d38bde4c1f1549dda43db37b09c608aad3",
+    "/card-builder/assets/fonts/RobotoMono-VariableFont_wght.ttf": "49b4d9fac9359dbe93549548dcf74141e491ad6f",
+    "/card-builder/assets/icons/android-chrome-192x192.png": "fce46b16f7dc62301abaccffb42ecf31911fce8a",
+    "/card-builder/assets/icons/android-chrome-512x512.png": "e1175c6e92b2c27b37cc316d6a59104bf2c3184e",
+    "/card-builder/assets/icons/apple-touch-icon.png": "a83417d59d99cd4be2190c1a9dc907f0d53318ae",
+    "/card-builder/assets/icons/favicon-16x16.png": "1b8824c52db5ee166feae13bddfe7f2bd6bdc910",
+    "/card-builder/assets/icons/favicon-32x32.png": "8d5a32ba748a66d9d4e583e7dab58189dcbd650a",
+    "/card-builder/assets/icons/favicon.ico": "d8c7a1cef5a499b359b7f8c33b47ff63e9cbb142",
+    "/card-builder/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/card-builder/index.html": "19368ed5411897cca6791e1e98c79fea661ce9a3",
+    "/card-builder/main.e280f0474d84f813.js": "f767605eb874e277d12d91c306912891e845d8ac",
+    "/card-builder/manifest.webmanifest": "ea189d18516e29cefe2e9c7d3e37d7ffc524a57d",
+    "/card-builder/polyfills.eecd7548eac8bd7f.js": "82d19db75d0efae84475bfa40501cc7309e326db",
+    "/card-builder/runtime.4b032de088406900.js": "9ede7a33543b6b04aa2d466890b59367c2dc3f5e",
+    "/card-builder/styles.07e62f539be1b563.css": "3a04222fe3ca000498444bbccd5479acb00fc2bc"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
