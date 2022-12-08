@@ -1,12 +1,17 @@
 <span class="card-builder-main">
   <span class="header-section">
     <h1>WHAT DO WE HAVE HERE?</h1>
-    <em class="subtitle"><span class="rotate-arrow">&#8626;</span>magick item card builder for swords and sworcery games</em>
-    <span class="subtitle small">v1.1 created by <a href="https://twitter.com/codeLiches" target="_blank">@codeLiches</a></span>
+    <span class="subtitle"><span class="rotate-arrow">&#8626;</span><em>magick item card builder for swords and sworcery games</em></span>
+    <span class="subtitle small">v1.2 created by <a href="https://twitter.com/codeLiches" target="_blank">@codeLiches</a></span>
     <span class="button-section">
-      <button @showHideAnimation *ngIf="cardDeck.length > 0" class="print" (click)="print()"><strong>print</strong></button>
-      <button @showHideAnimation class="collapse" (click)="showSidebar = !showSidebar"><strong>{{showSidebar ? 'hide builder' : 'show builder'}}</strong>
+      <button @showHideAnimation *ngIf="cardDeck.length > 0" >
+        <a (click)="download()" id="downloadAnchorElem">
+          <strong>SAVE DECK</strong>
+        </a>
       </button>
+      <button @showHideAnimation class="collapse" (click)="showSidebar = !showSidebar"><strong>{{showSidebar ? 'HIDE BUILDER' : 'SHOW BUILDER'}}</strong>
+      </button>
+      <button @showHideAnimation class="collapse" onclick="document.querySelector('#hiddenInput').click()">LOAD DECK</button>
     </span>
   </span>
   <div class="card-creator-layout">
@@ -21,11 +26,11 @@
           <textarea id="description"type='text' formControlName="description" autocomplete="off"></textarea>
           <label for="keywords">What quick descriptions do we give it?</label>
           <input id="keywords"type='text' formControlName="keywords" autocomplete="off">
-          <button @slideLeft *ngIf="cardData.value.itemName && cardData.value.description" class="create" type="submit"><strong>create card</strong></button>
+          <button @slideLeft *ngIf="cardData.value.itemName && cardData.value.description" class="create" type="submit"><strong>CREATE CARD</strong></button>
         </form>
-        <button @slideLeft class="clearForm" *ngIf="showClearButton()" (click)="clearForm()"><strong>clear builder</strong></button>
-        <button @slideLeft *ngIf="cardDeck.length > 0" class="clear" (dblclick)="clearDeck()"><strong>doubleclick to destroy the deck</strong></button>
-        <em class="subtitle"><span class="rotate-arrow">&#8626;</span>add a name & a story to create a card</em>
+        <button @slideLeft class="clearForm" *ngIf="showClearButton()" (click)="clearForm()"><strong>CLEAR BUILDER</strong></button>
+        <button @slideLeft *ngIf="cardDeck.length > 0" class="clear" (dblclick)="clearDeck()"><strong>DOUBLECLICK TO DESTROY DECK</strong></button>
+        <span class="subtitle"><span class="rotate-arrow">&#8626;</span><em>add a name & a story to create a card</em></span>
       </span>
 
       <span @slideLeft *ngIf="showSidebar" class="card-preview">
@@ -42,7 +47,7 @@
             {{cardData.value.keywords || 'quick little descriptions'}}
           </em>
         </div>
-        <em class="subtitle"><span class="rotate-arrow">&#8626;</span>card preview</em>
+        <span class="subtitle"><span class="rotate-arrow">&#8626;</span><em>card preview</em></span>
       </span>
     </span>
 
@@ -72,3 +77,5 @@
 
   </div>
 </span>
+
+<input style='display: none' #fileUploadInput type='file' id='hiddenInput' accept=".json, application/json" (change)='loadDeck($event)'>

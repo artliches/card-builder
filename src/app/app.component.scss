@@ -100,7 +100,6 @@ button {
             flex-direction: column;
             input, textarea {
                 border: none;
-                border-radius: 5px;
                 margin-bottom: 1rem;
             }
         }
@@ -130,7 +129,6 @@ button {
         color: black;
         padding: 1rem;
         border: 1px solid black;
-        border-radius: 10px;
     
         display: grid;
         grid-template-columns: 1fr;
@@ -146,8 +144,11 @@ button {
             grid-template-rows: repeat(2, auto) 1fr auto;
         }
         &.deck-card {
+            background-color: black;
+            border: 1px solid white;
+            color: white;
             grid-template-rows: repeat(3, auto) 1fr auto;
-            .remove, .title {
+            .remove {
                 cursor: pointer;
             }
             .remove {
@@ -175,6 +176,7 @@ button {
             place-self: center;
             text-align: center;
             font-size: $small-font;
+            text-transform: lowercase;
         }
     
         .keywords {

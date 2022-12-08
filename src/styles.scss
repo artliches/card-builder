@@ -10,30 +10,47 @@
     font-weight: 100 1000;
 }
 
+@font-face {
+    font-family: "Poppins";
+    src: local("Poppins"), url(./assets/fonts/Poppins-Regular.ttf) format('opentype');
+    font-weight: 100 1000;
+}
+
 body {
     // background-image: linear-gradient(to right, black, #414141);
-    background-image: linear-gradient(to right, black, #787878);
+    // background-image: linear-gradient(to right, black, #787878);
+    background-color: black;
     margin: 1rem;
     color: white;
-    font-family: 'Roboto Mono', sans-serif;
+    font-family: 'Poppins', sans-serif;
     height: 100vh;
 
     h1, .title, label {
         font-family: 'Gabriela-Regular', 'Roboto Mono', sans-serif;
     }
     button {
-        font-family: 'Roboto Mono', sans-serif;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
     }
     textarea {
         resize: vertical;
+        font-family: 'Poppins', sans-serif;
+        &#flavor {
+            text-transform: lowercase;
+        }
     }
-    input#itemName {
-        text-align: center;
+    input {
+        &#itemName {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Gabriela-Regular', 'Roboto Mono', sans-serif;
+        }
     }
     a {
         background-color: white;
         color: black;
         font-weight: bold;
+        text-decoration: none;
     }
 }
 
