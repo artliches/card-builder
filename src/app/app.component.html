@@ -2,7 +2,7 @@
   <span class="header-section">
     <h1>WHAT DO WE HAVE HERE?</h1>
     <span class="subtitle"><span class="rotate-arrow">&#8626;</span><em>magick item card builder for swords and sworcery games</em></span>
-    <span class="subtitle small">v1.2 created by <a href="https://twitter.com/codeLiches" target="_blank">@codeLiches</a></span>
+    <span class="subtitle small">v1.3 created by <a href="https://twitter.com/codeLiches" target="_blank">@codeLiches</a></span>
     <span class="button-section">
       <button @showHideAnimation *ngIf="cardDeck.length > 0" >
         <a (click)="download()" id="downloadAnchorElem">
@@ -52,7 +52,7 @@
     </span>
 
     <div @slideUp *ngIf="cardDeck.length > 0" class="copy-info">
-      double click card to copy for discord
+      doubleclick card to copy for discord
     </div>
 
     <div class="card-grid">

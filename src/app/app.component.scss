@@ -112,7 +112,7 @@ button {
         grid-area: info;
         text-align: center;
         user-select: none;
-        place-self: start end;
+        place-self: center;
     }
 
     .card-grid {
@@ -239,10 +239,6 @@ button {
             .sidebar-section {
                 grid-template-columns: auto min-content;
             }
-
-            .copy-info {
-                place-self: unset;
-            }
         }
     }
 }
@@ -263,8 +259,8 @@ button {
                 &::before {
                     content: '↑';
                 }
-                place-self: start end;
                 writing-mode: vertical-lr;
+                place-self: start end;
             }
 
             .card-grid {
