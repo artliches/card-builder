@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1670268087181,
+  "timestamp": 1670523275339,
   "index": "/card-builder/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "/card-builder/favicon.ico",
         "/card-builder/index.html",
-        "/card-builder/main.a63d1f37f15a4c94.js",
+        "/card-builder/main.6d4113550040f852.js",
         "/card-builder/manifest.webmanifest",
         "/card-builder/polyfills.eecd7548eac8bd7f.js",
         "/card-builder/runtime.4b032de088406900.js",
-        "/card-builder/styles.113d9427ccd512a6.css"
+        "/card-builder/styles.e5fc2610f41832b9.css"
       ],
       "patterns": []
     },
@@ -30,8 +30,12 @@
       },
       "urls": [
         "/card-builder/Gabriela-Regular.f503bfc21c7a631c.ttf",
+        "/card-builder/Poppins-Regular.4b4ebe20759bdbf2.ttf",
         "/card-builder/RobotoMono-VariableFont_wght.c2fd1c69d0c4ce13.ttf",
         "/card-builder/assets/fonts/Gabriela-Regular.ttf",
+        "/card-builder/assets/fonts/Poppins-Regular.ttf",
+        "/card-builder/assets/fonts/Poppins-Thin.ttf",
+        "/card-builder/assets/fonts/Poppins-ThinItalic.ttf",
         "/card-builder/assets/fonts/Roboto-Regular.ttf",
         "/card-builder/assets/fonts/RobotoMono-VariableFont_wght.ttf",
         "/card-builder/assets/icons/android-chrome-192x192.png",
@@ -47,8 +51,12 @@
   "dataGroups": [],
   "hashTable": {
     "/card-builder/Gabriela-Regular.f503bfc21c7a631c.ttf": "9428c6950613be9e41a9703da8cb1fa4f0374f4d",
+    "/card-builder/Poppins-Regular.4b4ebe20759bdbf2.ttf": "fdd3002e7d814ee47c1c1b8487c72c6bbb3a2d00",
     "/card-builder/RobotoMono-VariableFont_wght.c2fd1c69d0c4ce13.ttf": "49b4d9fac9359dbe93549548dcf74141e491ad6f",
     "/card-builder/assets/fonts/Gabriela-Regular.ttf": "9428c6950613be9e41a9703da8cb1fa4f0374f4d",
+    "/card-builder/assets/fonts/Poppins-Regular.ttf": "fdd3002e7d814ee47c1c1b8487c72c6bbb3a2d00",
+    "/card-builder/assets/fonts/Poppins-Thin.ttf": "09ba4dcd5509c8085bf88c665dcc51cbdfced27b",
+    "/card-builder/assets/fonts/Poppins-ThinItalic.ttf": "fb8fccca21550e71135f92bbaf8a2e8a12c90465",
     "/card-builder/assets/fonts/Roboto-Regular.ttf": "56c5c0d38bde4c1f1549dda43db37b09c608aad3",
     "/card-builder/assets/fonts/RobotoMono-VariableFont_wght.ttf": "49b4d9fac9359dbe93549548dcf74141e491ad6f",
     "/card-builder/assets/icons/android-chrome-192x192.png": "fce46b16f7dc62301abaccffb42ecf31911fce8a",
@@ -58,12 +66,12 @@
     "/card-builder/assets/icons/favicon-32x32.png": "8d5a32ba748a66d9d4e583e7dab58189dcbd650a",
     "/card-builder/assets/icons/favicon.ico": "d8c7a1cef5a499b359b7f8c33b47ff63e9cbb142",
     "/card-builder/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/card-builder/index.html": "e181d78e5f8aa6a0328db8ce109d312bf095306a",
-    "/card-builder/main.a63d1f37f15a4c94.js": "90322e3e9fff2f0f911addafa2f142fbb2dc6348",
+    "/card-builder/index.html": "a0f4ee68a294f9db66fbfb9a100166e8b090e1e5",
+    "/card-builder/main.6d4113550040f852.js": "7c5719b006879e10eeb13a921bfda266f84da101",
     "/card-builder/manifest.webmanifest": "65fbafb1728dcb889036e8c912facb5302101042",
     "/card-builder/polyfills.eecd7548eac8bd7f.js": "82d19db75d0efae84475bfa40501cc7309e326db",
     "/card-builder/runtime.4b032de088406900.js": "9ede7a33543b6b04aa2d466890b59367c2dc3f5e",
-    "/card-builder/styles.113d9427ccd512a6.css": "9c6c4656572bc50721e4aad2316e376b59d821b3"
+    "/card-builder/styles.e5fc2610f41832b9.css": "8c07cfc73e844862a9045c703a17342c37fca697"
   },
   "navigationUrls": [
     {
