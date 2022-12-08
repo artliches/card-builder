@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1670523275339,
+  "timestamp": 1670531370583,
   "index": "/card-builder/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/card-builder/favicon.ico",
         "/card-builder/index.html",
-        "/card-builder/main.6d4113550040f852.js",
+        "/card-builder/main.c47d0d9df8671273.js",
         "/card-builder/manifest.webmanifest",
         "/card-builder/polyfills.eecd7548eac8bd7f.js",
         "/card-builder/runtime.4b032de088406900.js",
@@ -66,8 +66,8 @@
     "/card-builder/assets/icons/favicon-32x32.png": "8d5a32ba748a66d9d4e583e7dab58189dcbd650a",
     "/card-builder/assets/icons/favicon.ico": "d8c7a1cef5a499b359b7f8c33b47ff63e9cbb142",
     "/card-builder/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/card-builder/index.html": "a0f4ee68a294f9db66fbfb9a100166e8b090e1e5",
-    "/card-builder/main.6d4113550040f852.js": "7c5719b006879e10eeb13a921bfda266f84da101",
+    "/card-builder/index.html": "b3f5c4bbbff163c659016020f04d92bb89b74586",
+    "/card-builder/main.c47d0d9df8671273.js": "67b59527b8d6ea6093b11243bde7f82745fa0e92",
     "/card-builder/manifest.webmanifest": "65fbafb1728dcb889036e8c912facb5302101042",
     "/card-builder/polyfills.eecd7548eac8bd7f.js": "82d19db75d0efae84475bfa40501cc7309e326db",
     "/card-builder/runtime.4b032de088406900.js": "9ede7a33543b6b04aa2d466890b59367c2dc3f5e",
